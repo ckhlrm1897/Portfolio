@@ -1,13 +1,86 @@
 nav {
-    height: 40px;
+    padding: 19px 72px 19px 72px;
+    color: #F8F9FA;
+    height: 80px;
     justify-content: space-between;
     font-family: 'BricolageGrotesque';
     font-weight: 700;
     font-size: 18px;
     display: flex;
     align-items: center;
-    >img{
+
+    >img {
         height: 38.54px;
         width: 40px;
+    }
+}
+
+@mixin navbox() {
+    height: 42px;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+@mixin hover_box() {
+    @include navbox();
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: clip-path 0.3s ease-in-out;
+    clip-path: inset(0 0 100% 0);
+}
+
+@mixin hover_fromleft() {
+    @include navbox();
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: clip-path 0.3s ease-in-out;
+
+}
+
+.hover_aboutme {
+    @include navbox();
+    @include hover_box();
+    background-image: url('/assets/img/hover/about_me.png');
+}
+
+.hover_skills {
+    @include navbox();
+    @include hover_box();
+    background-image: url('/assets/img/hover/skills.png');
+    clip-path: inset(0 100% 0 0);
+}
+
+.hover_projects {
+    @include navbox();
+    @include hover_box();
+    background-image: url('/assets/img/hover/projects.png');
+    clip-path: inset(0 100% 0 0);
+}
+
+.hover_contact {
+    @include navbox();
+    @include hover_box();
+    background-image: url('/assets/img/hover/contact.png');
+    clip-path: inset(0 100% 0 0);
+}
+
+.nav_box {
+    @include navbox();
+
+    &:hover {
+
+        .hover_contact,
+        .hover_skills,
+        .hover_projects,
+        .hover_aboutme {
+            clip-path: inset(0 0 0 0);
+            transition: clip-path 0.3s ease-in-out;
+        }
     }
 }

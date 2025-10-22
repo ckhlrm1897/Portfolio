@@ -8,5 +8,4 @@ import { bootstrapApplication } from '@angular/platform-browser';
   styleUrl: './header.scss'
 })
 export class Header {
-
 }
