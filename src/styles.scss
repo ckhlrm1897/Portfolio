@@ -8,7 +8,40 @@ main {
     margin: auto;
 }
 
-.d_flex {
+.position_center {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.button_frame{
+    position: relative;
+    width: 158px;
+    height: 49px;
+}
+
+button {
+    bottom: 4px;
+    right: 2px;
+    position: absolute;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: justify;
+    @extend .position_center;
+    color: #F8F9FA;
+    width: 154px;
+    height: 40px;
+    border: 1px solid #F8F9FA;
+    border-radius: 100px;
+    background: #00000003;
+    box-shadow: 2px 4px 0px 0px #F8F9FA;
+    transition: bottom 100ms, right 100ms;
+    
+    &:hover {
+        right: 0px;
+        bottom: 0px;
+        background: #F87A55;
+        box-shadow: none;
+    }
+}

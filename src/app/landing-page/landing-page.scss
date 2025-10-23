@@ -1,19 +1,29 @@
+@import './../../styles.scss';
 
 section{
     background-image: url('/assets/img/background_black.png');
     height: 100vh;
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     color: white;
     
 }
 
 
 .landing {
-    height: 100vh;
+    margin-top: 115px !important;
+    height: 490px;
+    width: 80%;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend .position_center;
+    position: relative;
+}
+
+.my_pic{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .polaroid{
@@ -32,3 +42,4 @@ section{
         top: 10px
     }
 }
+
