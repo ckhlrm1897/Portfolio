@@ -1,7 +1,7 @@
 @import "./../../styles.scss";
 
 section {
-    background-image: url("/assets/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
+    background-image: url("/assets/img/background_black.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -12,9 +12,8 @@ section {
 .landing {
     margin-top: 115px !important;
     height: 490px;
-    width: 80%;
+    width: 865px;
     margin: auto;
-    display: flex;
     @extend .position_center;
     position: relative;
 }
@@ -39,6 +38,28 @@ section {
         width: 87%;
         height: 188px;
         top: 10px;
+        filter: grayscale(100%);
+        transition: all 0.5s;
+    }
+    > .smiley {
+        bottom: 5px;
+        position: absolute;
+        font-family: "Kalam-Bold";
+        font-size: 24px;
+        width: auto;
+        color: #0e1013;
+    }
+
+    &:hover img {
+        filter: none;
+    }
+
+    &:hover span {
+        display: none;
+    }
+
+     &:hover .smiley:after {
+        content: "Christian :D";
     }
 }
 
@@ -52,7 +73,7 @@ section {
     width: 35.8px;
     background-image: url("/assets/img/hover/waving_hand.png");
     background-size: cover;
-    transition: all 0.7s cubic-bezier(0.25, 2.25, 0.6, 1);
+    transition: all 1s cubic-bezier(0.25, 1.5, 0.6, 1);
 }
 
 .hello_world {
@@ -66,14 +87,14 @@ section {
     @include button_standard();
     width: 145px;
     transition: all 1s cubic-bezier(0.25, 1.5, 0.6, 1);
-    cursor: pointer;
+    cursor: default;
     &:hover {
         background-color: $main-color-blue;
         width: 245px;
     }
     &:hover + .rotate_hand {
         opacity: 1;
-        left: 180px;
+        left: 200px;
         rotate: 0deg;
     }
     &:hover .world {
@@ -101,18 +122,33 @@ section {
 }
 
 .frontend_developer {
+    width: 100%;
+    height: 375px;
     display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.frontend {
+    width: 100%;
+    display: flex;
+}
+
+.developer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 .wrapper {
     width: auto;
     display: flex;
-    cursor: pointer;
-    &:hover .first_letter{
+    cursor: default;
+    &:hover .first_letter {
         display: none;
     }
 
-    &:hover .second_letter{
+    &:hover .second_letter {
         display: flex;
     }
 }
@@ -126,5 +162,5 @@ section {
     font-size: 128px;
     font-weight: 700;
     display: none;
-    color:#F7C518;
+    color: #f7c518;
 }
