@@ -1,14 +1,13 @@
-@import './../../styles.scss';
+@import "./../../styles.scss";
 
-section{
-    background-image: url('/assets/img/background_black.png');
+section {
+    background-image: url("/assets/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
     color: white;
-    
+    font-family: "BricolageGrotesque";
 }
-
 
 .landing {
     margin-top: 115px !important;
@@ -20,13 +19,13 @@ section{
     position: relative;
 }
 
-.my_pic{
+.my_pic {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 25px;
 }
 
-.polaroid{
+.polaroid {
     background-image: url("/assets/img/polaroid_frame.png");
     background-size: contain;
     width: 203.57px;
@@ -35,11 +34,97 @@ section{
     display: flex;
     justify-content: center;
     position: relative;
-    >img {
+    > img {
         position: absolute;
         width: 87%;
         height: 188px;
-        top: 10px
+        top: 10px;
     }
 }
 
+.rotate_hand {
+    rotate: -145deg;
+    position: absolute;
+    left: 110px;
+    top: 15px;
+    opacity: 0;
+    height: 35.8px;
+    width: 35.8px;
+    background-image: url("/assets/img/hover/waving_hand.png");
+    background-size: cover;
+    transition: all 0.7s cubic-bezier(0.25, 2.25, 0.6, 1);
+}
+
+.hello_world {
+    padding-left: 23px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    left: 0;
+    top: 55px;
+    @include button_standard();
+    width: 145px;
+    transition: all 1s cubic-bezier(0.25, 1.5, 0.6, 1);
+    cursor: pointer;
+    &:hover {
+        background-color: $main-color-blue;
+        width: 245px;
+    }
+    &:hover + .rotate_hand {
+        opacity: 1;
+        left: 180px;
+        rotate: 0deg;
+    }
+    &:hover .world {
+        opacity: 0;
+        // display: none;
+    }
+    &:hover .name {
+        opacity: 1;
+    }
+}
+
+.world {
+    position: absolute;
+    display: flex;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.name {
+    width: 245px;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.1s;
+    transition-delay: 0.1s;
+}
+
+.frontend_developer {
+    display: flex;
+}
+
+.wrapper {
+    width: auto;
+    display: flex;
+    cursor: pointer;
+    &:hover .first_letter{
+        display: none;
+    }
+
+    &:hover .second_letter{
+        display: flex;
+    }
+}
+
+.first_letter {
+    font-size: 128px;
+    font-weight: 700;
+}
+
+.second_letter {
+    font-size: 128px;
+    font-weight: 700;
+    display: none;
+    color:#F7C518;
+}

@@ -3,27 +3,7 @@
     src: url('/assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
 }
 
-main {
-    max-width: 1920px;
-    margin: auto;
-}
-
-.position_center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button_frame{
-    position: relative;
-    width: 158px;
-    height: 49px;
-}
-
-button {
-    bottom: 4px;
-    right: 2px;
-    position: absolute;
+@mixin button_standard {
     font-weight: 500;
     font-size: 18px;
     line-height: 120%;
@@ -35,6 +15,26 @@ button {
     border: 1px solid #F8F9FA;
     border-radius: 100px;
     background: #00000003;
+}
+
+$main-color-blue: #3355FF;
+
+main {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.position_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    bottom: 4px;
+    right: 2px;
+    position: absolute;
+    @include button_standard();
     box-shadow: 2px 4px 0px 0px #F8F9FA;
     transition: bottom 100ms, right 100ms;
     
@@ -44,4 +44,8 @@ button {
         background: #F87A55;
         box-shadow: none;
     }
+}
+
+p {
+    margin: 0 !important;
 }
