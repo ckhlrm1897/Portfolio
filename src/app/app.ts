@@ -6,7 +6,7 @@ import { LandingPage } from "./landing-page/landing-page";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header, LandingPage],
+  imports: [RouterOutlet, LandingPage],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
