@@ -72,8 +72,22 @@ button {
     // clip-path: inset(0 0 100% 0);
 }
 
-.blue_underline{
-    width: 200px;
+@keyframes left_right_animation {
+  from {clip-path: inset(0 100% 0 0);};
+  to {clip-path: inset(0 0 0 0);}
+}
+
+// @keyframes right_left_animation {
+//   from {clip-path: inset(0 0 0 0);};
+//   to {clip-path: inset(0 100% 0 0);}
+// }
+
+.blue_underline {
+    width: 303px;
     height: 20px;
     background-image: url('/assets/img/blue_underline.png');
+    animation: left_right_animation 500ms 2 2s;
+    animation-direction: alternate;
 }
+
+
