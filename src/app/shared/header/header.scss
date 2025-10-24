@@ -1,3 +1,5 @@
+@import "./../../../styles.scss";
+
 nav {
     padding: 19px 72px 19px 72px;
     color: #F8F9FA;
@@ -34,15 +36,6 @@ nav {
     clip-path: inset(0 0 100% 0);
 }
 
-@mixin hover_fromleft() {
-    @include navbox();
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: clip-path 0.3s ease-in-out;
-
-}
-
 .hover_aboutme {
     @include navbox();
     @include hover_box();
@@ -74,7 +67,6 @@ nav {
     @include navbox();
 
     &:hover {
-
         .hover_contact,
         .hover_skills,
         .hover_projects,

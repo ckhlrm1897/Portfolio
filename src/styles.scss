@@ -1,3 +1,12 @@
+body{
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('/assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
@@ -24,15 +33,30 @@
     line-height: 120%;
     text-align: justify;
     @extend .position_center;
-    color: #F8F9FA;
+    color: $main-color-white;
     width: 154px;
     height: 40px;
-    border: 1px solid #F8F9FA;
+    border: 1px solid $main-color-white;
     border-radius: 100px;
     background: #00000003;
 }
 
 $main-color: #3355FF;
+$main-color-white: #F8F9FA;
+$main-font: 'BricolageGrotesque';
+$main-black: #0E1013;
+
+h1{
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+h2 {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 20px;
+}
 
 main {
     max-width: 1920px;
@@ -50,7 +74,7 @@ button {
     right: 2px;
     position: absolute;
     @include button_standard();
-    box-shadow: 2px 4px 0px 0px #F8F9FA;
+    box-shadow: 2px 4px 0px 0px $main-color-white;
     transition: bottom 100ms, right 100ms;
     
     &:hover {

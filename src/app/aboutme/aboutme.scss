@@ -1,0 +1,79 @@
+@import "./../../styles.scss";
+
+section {
+    @extend .position_center;
+    justify-content: space-around !important;
+    padding: 144px 120px 144px 120px;
+    font-family: $main-font;
+}
+
+.about_me {
+    height: 432px;
+    width: 560px;
+    font-weight: 400;
+    position: relative;
+    >p {
+        padding-top: 48px;
+    }
+}
+.info_cards {
+    size: auto;
+}
+
+.card {
+    margin-top: -50px;
+    border: none;
+    width: 560px;
+    height: 152px;
+    @extend .position_center;
+    flex-direction: row;
+    gap: 16px;
+    background-color: transparent;
+    font-size: 24px;
+    color: $main-color-white;
+    >img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.yellow {
+    background-image: url('/assets/img/yellow.png');
+    z-index: 2;
+    background-size: cover;
+    rotate: -4deg;
+    padding-bottom: 20px;
+}
+
+.blue {
+    background-image: url('/assets/img/blue.png');
+    z-index: 1;
+    background-size: cover;
+}
+
+.orange {
+    background-image: url('/assets/img/orange.png');
+    background-size: cover;
+    rotate: 4deg;
+}
+
+button {
+    border-color: $main-black;
+    color: $main-black;
+    box-shadow: 2px 4px 0px 0px $main-black;
+}
+
+.animation_box{
+    size: auto;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: clip-path 0.3s ease-in-out;
+    // clip-path: inset(0 0 100% 0);
+}
+
+.blue_underline{
+    width: 200px;
+    height: 20px;
+    background-image: url('/assets/img/blue_underline.png');
+}
